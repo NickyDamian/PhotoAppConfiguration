@@ -1,0 +1,8 @@
+#If 0, port num is auto choosen
+server.port=0
+spring.application.name=users-ws-name-boii
+#This is the fully qualified url by which the client url will communicate with eureka server
+eureka.client.service-url.defaultZone=http://localhost:8010/eureka
+eureka.instance.prefer-ip-address=true
+#Set a unique id to each instance of microservice
+eureka.instance.instance-id=${spring.application.name}:${spring.application.instance_id:${random.value}}
